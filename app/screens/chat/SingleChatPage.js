@@ -96,13 +96,13 @@ class SingleChatPage extends React.Component {
     QB.chat
       .sendMessage(message)
       .then(() => {
-        alert(this.state.message + " sent successfully");
+        // alert(this.state.message + " sent successfully");
         this.setState({ message: '' });
         // call chatHistory to update the view
         this.chatHistory();
       })
       .catch(function (e) {
-        alert("not sent");
+        // alert("not sent");
         console.log("err from chat");
         console.log(e);
 
@@ -257,7 +257,7 @@ class SingleChatPage extends React.Component {
         dialogId: '5ebe871aa28f9a4f681c0b8c' // something like 'dsfsd934329hjhkda98793j2'
       })
       .then(function () {
-        alert("subed successfully")
+        // alert("subed successfully")
       })
       .catch(function (e) {
         alert("there ia an error"); console.log(e);
@@ -273,13 +273,14 @@ class SingleChatPage extends React.Component {
       <ThemeConsumer>
         {(value) => (
           <ChatHeader
-            title={state.params.name}
+            title={state.params.login}
             logo={state.params.logo}
             description={state.params.description}
             onlineUsers={this.state.userOnline}
             forumId={forumId}
             forumDetails={this.state.forumDetails}
             token={this.state.token}
+            login={state.params.login}
           >
             <ScrollView>
               <KeyboardAvoidingView>

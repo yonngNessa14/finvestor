@@ -123,7 +123,7 @@ class ChatHeader extends Component {
                       </Text>
                       <Text style={styles.subtitleTxt}>
                         {' '}
-                        {`${arr.length} people online`}{' '}
+                        {this.props.navigation.getParams('login') ? `${arr.length} people online` : null}{' '}
                       </Text>
                     </View>
                   }}

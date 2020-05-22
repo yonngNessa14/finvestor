@@ -220,7 +220,7 @@ class ChatPage extends React.Component {
         dialogId: '5ebe871aa28f9a4f681c0b8c' // something like 'dsfsd934329hjhkda98793j2'
       })
       .then(function () { 
-        alert("subed successfully")
+        // alert("subed successfully")
        })
       .catch(function (e) { alert("there ia an error"); console.log(e);
       });
@@ -242,6 +242,7 @@ class ChatPage extends React.Component {
             forumId={forumId}
             forumDetails={this.state.forumDetails}
             token={this.state.token}
+            
           >
             <ScrollView>
               <KeyboardAvoidingView>
