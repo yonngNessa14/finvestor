@@ -107,7 +107,6 @@ class ChatHeader extends Component {
                     let arr = [];
                     chatValue.chats.map(el => {
                       if (arr.includes(el.senderId)) {
-                        // console.log("already there");
                         
                       }
                       else {
@@ -123,7 +122,7 @@ class ChatHeader extends Component {
                       </Text>
                       <Text style={styles.subtitleTxt}>
                         {' '}
-                        {this.props.navigation.getParams('login') ? `${arr.length} people online` : null}{' '}
+                        {this.props.login ? `${arr.length} people online` : null}{' '}
                       </Text>
                     </View>
                   }}
